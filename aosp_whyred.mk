@@ -19,16 +19,25 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
-# Inherit some common CherishOS stuff.
-$(call inherit-product, vendor/cherish/config/common_full_phone.mk)
+# Inherit some common PixelPlusOS stuff.
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
-# Cherish Properties
+# PixelPlus Properties !
 TARGET_INCLUDE_WIFI_EXT := true
 TARGET_GAPPS_ARCH := arm64
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_INCLUDE_LIVE_WALLPAPERS := false
 TARGET_INCLUDE_STOCK_ARCORE := true
-CHERISH_BUILD_TYPE := Official
+TARGET_FACE_UNLOCK_SUPPORTED = true
+CUSTOM_BUILD_TYPE=OFFICIAL
+
+# PixelPlus Props !
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.ppui.device_name=RedmiNote5Pro \
+ro.ppui.version=3.3 \
+ro.ppui.version_code=Tanzanite \
+ro.ppui.is_official=true \
+ro.ppui.maintainer_name=SALMANKHANPM
 
 # Inherit from whyred device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
@@ -40,7 +49,7 @@ $(call inherit-product, vendor/MiuiCamera/config.mk)
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := whyred
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_NAME := cherish_whyred
+PRODUCT_NAME := aosp_whyred
 PRODUCT_MODEL := Redmi Note 5
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
