@@ -1,4 +1,4 @@
-# 
+#
 # Copyright (C) 2018 The Mokee Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -28,10 +28,10 @@ $(call inherit-product, device/xiaomi/whyred/device.mk)
 # Inherit from custom vendor
 $(call inherit-product-if-exist, vendor/MiuiCamera/config.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/fluid/config/common_full_phone.mk)
+# Inherit some common PPUI stuff.
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
-PRODUCT_NAME := fluid_whyred
+PRODUCT_NAME := aosp_whyred
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := whyred
 PRODUCT_MANUFACTURER := Xiaomi
@@ -54,10 +54,13 @@ IS_PHONE := true
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_SCREEN_DENSITY := 440
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_FACE_UNLOCK_SUPPORTED = true
 
-# Fluid stuff
-FLUID_BUILD_TYPE := OFFICIAL
+# PixelPlusUI stuff
+CUSTOM_BUILD_TYPE=OFFICIAL
 PRODUCT_PRODUCT_PROPERTIES += \
-  ro.fluid.maintainer=Arnav \
-  ro.fluid.cpu=SD636
-
+    ro.ppui.device_name=Redmi-Note-5-Pro \
+    ro.ppui.version=3.7 \
+    ro.ppui.version_code=Ragnarok \
+    ro.ppui.is_official=true \
+    ro.ppui.maintainer_name=Arnav
