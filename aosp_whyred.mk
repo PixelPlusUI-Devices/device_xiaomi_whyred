@@ -31,6 +31,9 @@ $(call inherit-product-if-exist, vendor/MiuiCamera/config.mk)
 # Inherit some common PPUI stuff.
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
+# Inherit Xiaomi Parts
+$(call inherit-product, vendor/XiaomiParts/config.mk)
+
 PRODUCT_NAME := aosp_whyred
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := whyred
