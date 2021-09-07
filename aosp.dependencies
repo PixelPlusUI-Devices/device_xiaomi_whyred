@@ -1,0 +1,19 @@
+[
+  {
+    "repository":  "device_xiaomi_whyred",
+    "target_path": "device/xiaomi/whyred",
+    "branch":      "eleven"
+  },
+  {
+    "repository"  : "vendor_xiaomi_whyred",
+    "target_path" : "vendor/xiaomi/whyred",
+    "branch":      "eleven"
+  },
+  {
+    "remote":      "github",
+    "repository":  "arnavpuranik/kernel_xiaomi_whyred",
+    "target_path": "kernel/xiaomi/whyred",
+    "branch":      "11"
+  }
+]
+
