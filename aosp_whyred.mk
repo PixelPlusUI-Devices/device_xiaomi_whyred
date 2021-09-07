@@ -63,8 +63,8 @@ TARGET_FACE_UNLOCK_SUPPORTED = true
 CUSTOM_BUILD_TYPE=OFFICIAL
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.ppui.device_name=Whyred \
-    ro.ppui.version=3.8 \
-    ro.ppui.version_code= Hikaru \
+    ro.ppui.version=3.9 \
+    ro.ppui.version_code= Eternal \
     ro.ppui.is_official=true \
     ro.ppui.maintainer_name=Arnav
 
